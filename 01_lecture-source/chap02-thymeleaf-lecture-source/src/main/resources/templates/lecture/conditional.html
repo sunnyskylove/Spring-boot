@@ -29,5 +29,12 @@
     <p th:if="${ num > 0 or num <= 10}">1부터 10까지의 양수</p>
     <p th:if="${ str != null and str == '바나나'}">바나나가 좋아유</p>
     <p th:if="${ !#strings.isEmpty(str) and str == '바나나'}">바나나 조아유</p>
+
+        <h2>th:switch, th:case</h2>
+        <h3>해당 조건의 값이 어떤 case 해당되는 지에 따라서 태그를 선택할 수 있다.</h3>
+        <th:block th:switch="${str}">
+            <span th:case="사과">사과가 선택되었습니다</span>
+            <span th:case="바나나">바나나가 선택되었습니다.</span>
+        </th:block>
 </body>
 </html>
