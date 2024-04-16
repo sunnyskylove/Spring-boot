@@ -11,3 +11,5 @@ public class Chap02ThymeleafLectureSourceApplication {
 	}
 
 }
+
+// 원래 있었던 것, config 패키지 만들어줘서 그 안에 넣는다~!!

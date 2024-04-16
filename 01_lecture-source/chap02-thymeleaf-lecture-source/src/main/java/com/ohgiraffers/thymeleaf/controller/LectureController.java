@@ -16,7 +16,7 @@ import java.util.Map;
 @Controller
 @RequestMapping("/lecture")
 public class LectureController {
-
+ 
     @GetMapping("/expression")
     public ModelAndView expression(ModelAndView mv) {
 
@@ -57,7 +57,7 @@ public class LectureController {
     public ModelAndView etc(ModelAndView mv) {
 
         SelectCriteria selectCriteria = new SelectCriteria(1,10,3);
-        mv.addObject(selectCriteria);
+        mv.addObject(selectCriteria);       // 3번클릭 비활성화 만들기!
 
         MemberDTO member = new MemberDTO("조평훈",20,'남',"서울시 노진구");            //  푸쉬~~~!!!!
 

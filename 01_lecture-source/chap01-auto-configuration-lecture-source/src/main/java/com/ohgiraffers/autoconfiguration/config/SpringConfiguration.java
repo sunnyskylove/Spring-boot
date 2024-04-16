@@ -37,5 +37,5 @@ public class SpringConfiguration {
 
         return new Object();
     }
-    
+
 }

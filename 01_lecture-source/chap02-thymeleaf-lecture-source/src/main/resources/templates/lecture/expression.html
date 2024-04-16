@@ -34,7 +34,7 @@
 <p th:text="#{ message.value }"></p>
 
 <h2>표현식 3 - 링크 표현식 @{...}</h2>
-<a th:href="@{/}">메인으로</a>
+<a th:href="@{/}">메인으로</a>          <!-- / 는 뒤로 나간다. -->
 
 <h2>표현식 4 - 선택 변수 표현식 *{...}</h2>
 <p th:text="${member.name}"></p>
@@ -78,7 +78,7 @@
 
 <ul>
     <li th:inline="text">[[${ hello }]]</li>
-    <li>[(${ hello })]</li>
+    <li>[(${ hello })]</li>         <!-- 태그로 인식됨 확인! -->
     <li th:inline="none">[[${ hello }]]</li>
     <li th:inline="none">[(${ hello })]</li>
 </ul>
@@ -100,13 +100,15 @@
 
         /* 정적인 페이지, 동적인 페이지 둘 다 오류가 발생하지 않는다. */
         let hello = '[[${hello}]]';
+        // 참고. "" 가 아닌, '' 로 했을때 인식됨!
+
 
         alert(hello);
     }
 
 </script>
 
-<h2>리터럴 치환 ||</h2>
+<h2>리터럴 치환 ||    : `백틱`과 같은 기능! </h2>
 <h3>'+' 를 사용하지 않고 문자열 합치기</h3>
 <p th:object="${member}" th:text="|name = '*{name}'|"></p>
 <p th:object="${member}" th:text="|age = '*{age}'|"></p>
